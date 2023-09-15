@@ -4,6 +4,13 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Teste de formulário com Javascript</title>
+    <style>
+        fieldset{
+            background-color: rgba(246, 230, 243, 0.384);
+            margin-bottom: 10px;
+            width: 60vw;
+        }
+    </style>
 </head>
 <body>
     <script>
@@ -28,25 +35,32 @@
                 <label for="soma">Soma:</label>
                 <output name="soma" id="soma">0</output>
             </p>
-            <p>
-                <label for="num">Nível de satisfação: </label>
-                <input type="range" name="num" id="num" min="0" max="10" value="5" oninput="valor.innerHTML = Number(num.value)">
-                <output id="valor">5</output>
-            </p>
-            <p>
-                <label for="ano">Em que ano você nasceu?</label>
-                <input type="number" name="ano" id="ano" min="1900" max="2023" oninput="calcIdade()">
-            </p>
-            <p>
-                <label for="idade">Sua idade é:</label>
-                <output id="idade">0</output>
-            </p>
-            <p>
-                <input type="submit" value="Enviar">
-                <input type="reset" value="Limpar">
-            </p>
     </fieldset>
+    <fieldset>
+        <legend>Satisfação</legend>
+        <p>
+            <label for="num">Nível de satisfação: </label>
+            <input type="range" name="num" id="num" min="0" max="10" value="5" oninput="valor.innerHTML = Number(num.value)">
+            <output id="valor">5</output>
+        </p>
+    </fieldset>
+    <fieldset>
+        <legend>Ano de nascimento</legend>
+        <p>
+            <label for="ano">Em que ano você nasceu?</label>
+            <input type="number" name="ano" id="ano" min="1900" max="2023" oninput="calcIdade()">
+        </p>
+        <p>
+            <label for="idade">Sua idade é:</label>
+            <output id="idade">0</output>
+        </p>
+        
+    </fieldset>
+        <p>
+            <input type="submit" value="Enviar">
+             <input type="reset" value="Limpar">
+        </p>
     </form>
-    <p>Voltar para a <a href="formulario.html">página anterior</a></p>
+    <p>Voltar para a <a href="../index.html">página anterior</a></p>
 </body>
 </html>
