@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="pt
+">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Testanto formulário</title>
+    <style>
+        *{
+            font-family: Arial, Helvetica, sans-serif;
+        }
+        form{
+            margin-left: 5px;
+        }
+        legend{
+            margin-bottom: 5px;
+            font-size: 0.9em;
+        }
+
+        input#botaoenviar{
+            padding-left: 15px;
+            padding-right: 15px;
+            margin-left: 35px;
+            margin-right: 20px;
+            margin-top: 5px;
+            margin-bottom: 20px;
+        }
+
+        input#botaolimpar{
+            padding-left: 15px;
+            padding-right: 15px;
+        }
+        fieldset{
+            width: 60vw;
+            margin-bottom: 20px;
+            padding-bottom: 20px;
+            background-color: rgba(192, 188, 188, 0.105);
+        }
+
+    </style>
+<body>
+    <h2>Teste de formulário</h2>
+    <form action="arquivo.php" method="post" autocomplete="on">
+        <fieldset>
+            <legend>Preencha os campos</legend>
+            <p><label for="nome">Nome:</label>
+                <input type="text" name="nome" id="nome" placeholder="seu nome" required></p>
+            <p><label for="sobrenome">Sobrenome:</label>
+                <input type="text" name="sobrenome" id="sobrenome" placeholder="seu sobrenome" size="14"></p>
+            <p><label for="senha">Senha:</label>
+                <input type="password" name="senha" id="senha" placeholder="entre 4 e 14 caracteres" required minlength="5" maxlength="14"></p>
+            <p> <label for="media">Média:</label>
+                <input type="number" name="media" id="media" min="0" max="10" step="0.1" placeholder="0 a 10" required></p>
+            <p><label for="mes">Período letivo:</label>
+                <input type="month" name="mes" id="mes" value="2023-09"><p>
+            <p><label for="data">Data da prova:</label>
+                <input type="date" name="data" id="data" value="2023-08-27"></p>
+            <p><label for="hora">Hora da prova:</label>
+                <input type="time" name="hora" id="hora" value="08:00"></p>
+            <p><label for="email">E-mail:</label>
+                <input type="email" name="email" id="email" placeholder="seu email" autocomplete="email"></p>
+            <p><label for="telefone">Telefone:</label>
+                <input type="tel" name="telefone" id="telefone" placeholder="(xx)xxxxxxxx" autocomplete="tel" pattern="^\(\d{2}\)\d{8,9}$"></p>
+        </fieldset>
+        <fieldset>
+            <legend>Sexo</legend>
+            <input type="radio" name="sexo" id="masculino">
+            <label for="masculino">Masculino</label><br>
+            <input type="radio" name="sexo" id="feminino">
+            <label for="feminino">Feminino</label><br>
+        </fieldset>
+        <fieldset>
+            <legend>Esportes favoritos</legend>
+            <input type="checkbox" name="futebol" id="futebol"> <label for="futebol">Futebol</label><br>
+            <input type="checkbox" name="futamericano" id="futamericano"> <label for="futamericano">Futebol americano</label><br>
+            <input type="checkbox" name="volei" id="volei"> <label for="volei">Vôlei</label><br>
+            <input type="checkbox" name="basquete" id="basquete"> <label for="basquete">Basquete</label><br>
+            <input type="checkbox" name="tenis" id="tenis"> <label for="tenis">Tênis</label><br>
+            <input type="checkbox" name="natacao" id="natacao"> <label for="natacao">Natação</label><br>
+        </fieldset>
+        <fieldset>
+            <p><label for="nivel">Nível de satisfação:</label><br><br>
+            <input type="range" name="nivel" id="nivel" min="1" max="5" value="3"></p>
+        </fieldset>
+        <fieldset>
+            <label for="arquivo">Envie o arquivo:</label>
+            <input type="file" name="arquivo" id="arquivo"><br>
+        </fieldset>
+        <fieldset>
+            <p> <!--pra select não precisa de input-->
+                <label for="estado">Estado:</label>
+                <select name="estado" id="estado">
+                    <optgroup label="Região nordeste">
+                        <option value="PE">Pernambuco</option>
+                        <option value="CE">Ceará</option>
+                        <option value="PB">Paraíba</option>
+                    </optgroup>
+                    <optgroup label="Região sudeste">
+                        <option value="RS">Rio Grande do Sul</option>
+                        <option value="PR">Paraná</option>
+                        <option value="SC">Santa Catarina</option>
+                    </optgroup>
+                </select>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p>
+                <label for="profissao">Profissão:</label>
+                <input type="text" name="profissao" id="profissao" list="listaprofissao">
+                <datalist id="listaprofissao"> <!--não precisa de name-->
+                    <option>Administrador</option>
+                    <option>Economista</option>
+                    <option>Professor</option>
+                    <option>Engenheiro</option>
+                    <option>Desenvolvedor</option>
+                </datalist>
+            </p>
+        </fieldset>
+        <fieldset>
+            <p> 
+                <label for="mensagem">Mensagem:</label><br>
+                <textarea name="" id="mensagem" cols="35" rows="7" placeholder="Sua mensagem aqui"></textarea>
+            </p>
+        </fieldset>
+            <p><input type="submit" value="Enviar" id="botaoenviar">
+                <input type="reset" value="Limpar" id="botaolimpar"><p>  
+    </form>
+    <p>Ir para o <a href="formulario02.html">formulário02</a></p>
+</body>
+</html>
